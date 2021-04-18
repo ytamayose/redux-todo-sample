@@ -1,10 +1,10 @@
 import React from "react";
-import { useDispatch } from "react-redux"; // <-- 追記
-import { addTodo } from "../../../features/todo/todoSlice"; // <-- 追記
+import { useDispatch } from "react-redux";
+import { addTodo } from "../../../features/todo/todoSlice";
 
 export default function AddTodo(): JSX.Element {
   const [text, setText] = React.useState("");
-  const dispatch = useDispatch(); // <-- 追記
+  const dispatch = useDispatch();
   function handleChange(e: { target: HTMLInputElement }) {
     setText(e.target.value);
   }
@@ -15,7 +15,7 @@ export default function AddTodo(): JSX.Element {
     if (!text.trim()) {
       return;
     }
-    dispatch(addTodo(text)); // <-- 追記
+    dispatch(addTodo(text));
     setText("");
   }
 

@@ -8,7 +8,7 @@ import {
   incrementAsync,
   incrementIfOdd,
   selectCount,
-} from '../../features/counter/counterSlice'; // <-- 修正
+} from '../../features/counter/counterSlice';
 import styles from './Counter.module.css';
 
 export function Counter() {
@@ -63,11 +63,9 @@ export function Counter() {
           Add If Odd
         </button>
       </div>
-      {/*  --- ここから追記 --- */}
       <p>
         Edit <code>src/pages/counter/Counter.tsx</code> and save to reload.
       </p>
-      {/*  --- ここまで ---  */}
     </div>
   );
 }

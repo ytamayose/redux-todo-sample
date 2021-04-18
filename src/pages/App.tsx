@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from './assets/logo.svg'; // <-- 修正
-import { BrowserRouter as Router, Route } from 'react-router-dom'; // <-- 追記
-import { Counter } from './counter/Counter'; // <-- 修正
-import Todo from './todo/TodoApp'; // <-- 追記
+import logo from './assets/logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Counter } from './counter/Counter';
+import Todo from './todo/TodoApp';
 import './App.css';
 
 function App() {
@@ -14,12 +14,6 @@ function App() {
           <Route exact path="/" component={Counter} />
           <Route exact path="/todo" component={Todo} />
         </Router>
-        {/* --- ここから削除 ---
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        --- ここまで --- */}
         <span>
           <span>Learn </span>
           <a
