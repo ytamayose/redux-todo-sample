@@ -1,6 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import logo from './assets/logo.svg'; // <-- 修正
+import { BrowserRouter as Router, Route } from 'react-router-dom'; // <-- 追記
+import { Counter } from './counter/Counter'; // <-- 修正
+import Todo from './todo/TodoApp'; // <-- 追記
 import './App.css';
 
 function App() {
@@ -8,10 +10,16 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <Router>
+          <Route exact path="/" component={Counter} />
+          <Route exact path="/todo" component={Todo} />
+        </Router>
+        {/* --- ここから削除 ---
         <Counter />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        --- ここまで --- */}
         <span>
           <span>Learn </span>
           <a
